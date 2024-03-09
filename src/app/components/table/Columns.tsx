@@ -63,7 +63,7 @@ export const columns: ColumnDef<NameInfo>[] = [
                 <DropdownMenuLabel>REST COUNTRIES</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 {
-                    countryData.map((country:CountryType)=><DropdownMenuItem>{getCountryCode.of(country.country_id)} {((country.probability)*100).toFixed(0)} %</DropdownMenuItem>)
+                    countryData.map((country:CountryType)=><DropdownMenuItem key={country.country_id}>{getCountryCode.of(country.country_id)} {((country.probability)*100).toFixed(0)} %</DropdownMenuItem>)
                 }
             </DropdownMenuContent>
             </DropdownMenu>
